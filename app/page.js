@@ -1,8 +1,8 @@
-import dbConnect from "@/lib/db";
+import dbConnection from "@/lib/database";
 import Image from "next/image";
 
 export default async function Home() {
-  await dbConnect();
+  await dbConnection();
   return (<div>
     <p> Notes app</p>
   </div>);
