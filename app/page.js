@@ -15,8 +15,7 @@ async function getNotes(){
 }
 
 export default async function Home() {
-  const notes = await getNotes()
-  await dbConnection();
+  const notes = await getNotes();
   return (<div>
     <p> Notes App</p>
     <NoteClient notes={notes} />
