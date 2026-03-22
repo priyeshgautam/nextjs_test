@@ -1,7 +1,11 @@
 "use client"
 import React, { useState } from 'react'
+import toast from 'react-hot-toast';
 
-function NoteClient() {
+function NoteClient({ notes: initialNotes = [] }) {
+  const [notes, setNotes] = useState(
+    () => (Array.isArray(initialNotes) ? initialNotes : [])
+  )
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [loading, setLoading] = useState(false);
@@ -18,12 +22,16 @@ function NoteClient() {
         body: JSON.stringify({title, content})
       })
       const result = await response.json();
-      console.log(result);
-      setLoading(false);
+      if(result.success){
+        setNotes([...notes, result.data])
+        setLoading(false);
+        toast.success('Notes created successfully')
+      }
+      
 
     } catch(error){
       console.log(error)
-
+      toast.error('Something went wrong')
     }
   }
   return (
@@ -56,7 +64,38 @@ function NoteClient() {
                 </button>
             </div>
         </form>
-    </div>
+        
+        <div className='space-y-4'>
+            <h2>
+              Your Notes ({notes.length})
+            </h2>
+            {notes.length === 0 ? (
+              <p>No notes created</p>
+            ) : (
+              notes.map((note) => (
+                <div key={note._id} className="bg-white p-6 rounded-lg shadow-md">
+                  <div className='flex justify-between items-start mb-2'>
+                  
+                  <h3 className="text-lg font-semibold mb-1 text-gray-700">{note.title}</h3>
+                  
+                  <div className='flex gap-6'>
+                    <button className='text-blue-500 hover:text-blue-700 text-sm'>Edit</button>
+                    <button className='text-red-500 hover:text-red-700 text-sm'>Delete</button>
+                  </div>
+                  </div>
+                  
+                  <p className="mb-2 text-gray-600">{note.content}</p>
+                  
+                  <div className="text-xs text-gray-500">
+                    <div>Created: {note.createdAt ? new Date(note.createdAt).toLocaleString() : "N/A"}</div>
+                    <div>Updated: {note.updatedAt ? new Date(note.updatedAt).toLocaleString() : "N/A"}</div>
+                  </div>
+
+                  </div>
+              ))
+            )}
+        </div>
+        </div>
   )
 }
 
