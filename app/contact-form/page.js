@@ -13,7 +13,7 @@ const ContactFormPage = () => {
           </Button>
         </Link>
 
-        <Link href="/contacts">
+        <Link href="/contact-form/contacts">
           <Button variant="outline" size="sm" className="bg-transparent">
             Contacts
           </Button>
