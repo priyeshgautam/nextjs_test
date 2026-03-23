@@ -1,6 +1,5 @@
 import NoteClient from "@/components/NoteClient"
 import dbConnection from "@/lib/database";
-import Image from "next/image";
 import Note from "@/models/note"
 
 async function getNotes(){
@@ -16,8 +15,11 @@ async function getNotes(){
 
 export default async function Home() {
   const notes = await getNotes();
-  return (<div>
+  return (
+  <div>
     <p> Notes App</p>
     <NoteClient notes={notes} />
-  </div>);
+  </div>)
+  
+  ;
 }
