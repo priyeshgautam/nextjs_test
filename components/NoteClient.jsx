@@ -294,7 +294,7 @@ function NoteClient({ notes: initialNotes = [] }) {
                 Key Learnings from the Notes App
               </h2>
               <ol className="list-decimal list-inside space-y-1 text-gray-700">
-                <li>Understanding and implementing CRUD operations</li>
+                <li>Understanding and implementing CRUD operations using api routes</li>
                 <li>Connecting to and working with MongoDB</li>
                 <li>
                   Integrating and using toast notifications for better UX
