@@ -32,7 +32,7 @@ const ContactForm = () => {
     
       }
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-200 py-10 px-4 flex flex-col items-center">
+    <div className="min-h-screen  from-gray-50 to-gray-200 py-10 px-4 flex flex-col items-center">
       <h2 className="text-3xl font-bold mb-6 text-gray-900 tracking-tight text-center">
         Get in Touch
       </h2>
@@ -94,6 +94,7 @@ const ContactForm = () => {
                 <li>Understanding and implementing CRUD operations using server actions</li>
                 <li>Connecting to and working with MongoDB</li>
                 <li>Using Shadcn components</li>
+                <li>Using revalidateTag and revalidateFromPath to remove cache</li>
               </ol>
             </div>
           </div>
