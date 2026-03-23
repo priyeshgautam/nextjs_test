@@ -12,6 +12,12 @@ const ContactFormPage = () => {
             Back to home
           </Button>
         </Link>
+
+        <Link href="/contacts">
+          <Button variant="outline" size="sm" className="bg-transparent">
+            Contacts
+          </Button>
+        </Link>
       </div>
       <ContactForm />
     </div>

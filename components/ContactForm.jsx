@@ -94,7 +94,7 @@ const ContactForm = () => {
                 <li>Understanding and implementing CRUD operations using server actions</li>
                 <li>Connecting to and working with MongoDB</li>
                 <li>Using Shadcn components</li>
-                <li>Using revalidateTag and revalidateFromPath to remove cache</li>
+                <li>Using revalidateTag and revalidatePath to remove cache</li>
               </ol>
             </div>
           </div>
