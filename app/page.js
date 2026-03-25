@@ -21,12 +21,17 @@ export default async function Home() {
       </Link>
     </div>
 
-    <div className="contact-form p-5 flex justify-center">
+    <div className="contact-form p-5 flex justify-center hidden">
       <Link href="/todo-app">
         <Button variant="outline">Open Todo App</Button>
       </Link>
     </div>
 
+    <div className="contact-form p-5 flex justify-center">
+      <Link href="/login">
+        <Button variant="outline">Open Authentication Flow</Button>
+      </Link>
+    </div>
   </div>  
   );
 }
