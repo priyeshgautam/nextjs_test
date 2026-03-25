@@ -4,7 +4,7 @@ import { revalidatePath } from "next/cache";
 
 import Todo from "@/models/todo"; // Import the function
 import { createTodoSchema } from "@/validations/todo";
-import dbConnection from "@/lib/database";
+import dbConnection from "@/lib/mongodb";
 
 export async function createTodo(data) {
   try {

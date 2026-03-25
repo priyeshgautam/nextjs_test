@@ -1,4 +1,4 @@
-import dbConnection from "@/lib/database";
+import dbConnection from "@/lib/mongodb";
 import Note from "@/models/note";
 import { NextResponse } from "next/server";
 

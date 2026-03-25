@@ -1,6 +1,6 @@
 "use server";
 
-import dbConnection from "@/lib/database";
+import dbConnection from "@/lib/mongodb";
 import Contact from "@/models/contact";
 import { revalidatePath, revalidateTag, unstable_cache } from "next/cache";
 

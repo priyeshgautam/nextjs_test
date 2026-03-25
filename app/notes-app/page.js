@@ -1,5 +1,5 @@
 import NoteClient from "@/components/NoteClient";
-import dbConnection from "@/lib/database";
+import dbConnection from "@/lib/mongodb";
 import Note from "@/models/note";
 
 async function getNotes() {
@@ -19,7 +19,7 @@ export default async function NotesAppPage() {
 
   return (
     <div>
-      
+
       <div className="mb-4">
         <Link href="/">
           <Button variant="outline" size="sm" className="bg-transparent">
