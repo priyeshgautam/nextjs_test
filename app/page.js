@@ -7,7 +7,7 @@ export default async function Home() {
     <div className="notes-app flex flex-col items-center justify-center py-5">
       <h1 className="text-2xl md:text-3xl font-bold mb-4 text-center">Next.js Learnings</h1>
     </div>
-    
+
     <div className="notes-app p-5 flex justify-center">
       <Link href="/notes-app">
         <Button variant="outline">Open Notes App</Button>
@@ -17,7 +17,13 @@ export default async function Home() {
 
     <div className="contact-form p-5 flex justify-center">
       <Link href="/contact-form">
-        <Button variant="outline">Open Contact Form</Button>
+        <Button variant="outline">Open Contact App</Button>
+      </Link>
+    </div>
+
+    <div className="contact-form p-5 flex justify-center">
+      <Link href="/todo-app">
+        <Button variant="outline">Open Todo App</Button>
       </Link>
     </div>
 
