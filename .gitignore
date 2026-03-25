@@ -49,3 +49,5 @@ next-env.d.ts
 
 # IDE
 .idea/
+
+/lib/generated/prisma
