@@ -21,15 +21,20 @@ export default async function Home() {
       </Link>
     </div>
 
-    <div className="contact-form p-5 flex justify-center hidden">
+    <div className="contact-form p-5 flex justify-center">
       <Link href="/todo-app">
         <Button variant="outline">Open Todo App</Button>
       </Link>
     </div>
-
+cp
     <div className="contact-form p-5 flex justify-center">
       <Link href="/login">
-        <Button variant="outline">Open Authentication Flow</Button>
+        <Button variant="outline">Open Authentication + Payment Flow</Button>
+      </Link>
+    </div>
+    <div className="contact-form p-5 flex justify-center">
+      <Link href="/ask-gemini">
+        <Button variant="outline"> LLM API integrate [ GEMINI ]</Button>
       </Link>
     </div>
   </div>  
